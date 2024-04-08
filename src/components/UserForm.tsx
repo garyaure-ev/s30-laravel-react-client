@@ -32,9 +32,10 @@ const UserForm: React.FC<Props> = ({ user = null }) => {
         if (user && Object.keys(user).length > 0) {
             setCurrentUser(JSON.parse(JSON.stringify(user)));
             setFormData(user);
-            let userRoles = selectedRoles;
+            let userRoles = new Array(0);
+            userRoles.splice(0, 1);
             user.roles.forEach((r:any) => {
-                userRoles.push(r.id);
+                userRoles.push(`${r.id}`);
             });
             setSelectedRoles(userRoles);
         }
@@ -74,11 +75,11 @@ const UserForm: React.FC<Props> = ({ user = null }) => {
     const onCheck = (e:any) => {
         const { name, value, checked } = e.target;
         let userRoles = selectedRoles;
-        let currentIndex = userRoles.indexOf(value);
+        let currentIndex = userRoles.indexOf(`${value}`);
         if (!checked &&  currentIndex >= 0) {
             userRoles.splice(currentIndex, 1);
         } else {
-            if (currentIndex < 0) userRoles.push(value);
+            if (currentIndex < 0) userRoles.push(`${value}`);
         }
         setSelectedRoles(userRoles);
     }
