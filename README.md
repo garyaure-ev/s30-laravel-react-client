@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Prepare Environment Variables
 
-Create .env file inside the app root folder and add the following line:
+Create `.env` file inside the app root folder and add the following line:
 
 `REACT_APP_API_BASE_URL=http://localhost:8000/api`
 
