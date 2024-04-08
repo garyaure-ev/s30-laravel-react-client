@@ -8,7 +8,7 @@ Create .env file inside the app root folder and add the following line:
 
 `REACT_APP_API_BASE_URL=http://localhost:8000/api`
 
-Please make sure the URL matched the backend API path, the above is based on the defaule `php artisan serve` of Laravel Framework.
+Please make sure the URL matched the backend API path, the above is based on the default `php artisan serve` of Laravel Framework.
 
 ## Available Scripts
 
